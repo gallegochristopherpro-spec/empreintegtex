@@ -8,7 +8,7 @@
 <meta name="robots" content="index, follow">
 <meta name="author" content="Empreinte GTEX">
 <meta name="keywords" content="personnalisation vêtement Tullins, personnalisation vêtement Grenoble, broderie logo entreprise, impression DTF textile, prévente vêtement, textile personnalisé Isère, marquage textile France, t-shirt personnalisé Grenoble">
-<link rel="canonical" href="https://www.empreinte-gtex.fr/">
+<link rel="canonical" href="https://empreintegtex.fr/">
 <!-- Géolocalisation -->
 <meta name="geo.region" content="FR-38">
 <meta name="geo.placename" content="Tullins">
@@ -20,13 +20,13 @@
 <meta property="og:site_name" content="Empreinte GTEX">
 <meta property="og:title" content="Empreinte GTEX — Personnalisation de vêtements à Tullins & Grenoble">
 <meta property="og:description" content="Broderie, impression DTF, prévente et textile sur-mesure. Atelier à Tullins, près de Grenoble. Devis gratuit, expédition dans toute la France.">
-<meta property="og:url" content="https://www.empreinte-gtex.fr/">
-<meta property="og:image" content="https://www.empreinte-gtex.fr/apercu.jpg">
+<meta property="og:url" content="https://empreintegtex.fr/">
+<meta property="og:image" content="https://empreintegtex.fr/apercu.jpg">
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Empreinte GTEX — Personnalisation de vêtements à Tullins & Grenoble">
 <meta name="twitter:description" content="Broderie, impression DTF, prévente et textile sur-mesure. Atelier à Tullins, expédition dans toute la France.">
-<meta name="twitter:image" content="https://www.empreinte-gtex.fr/apercu.jpg">
+<meta name="twitter:image" content="https://empreintegtex.fr/apercu.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800;900&family=Saira:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -347,8 +347,9 @@ a.info-row:hover .val{color:var(--amber)}
   .why-visual{min-height:240px}
 }
 @media(max-width:680px){
-  .menu{position:fixed;inset:0 0 0 auto;width:78%;max-width:340px;background:var(--ink-2);
-    flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:.4s;
+  .wrap{padding:0 22px}
+  .menu{position:fixed;inset:0 0 0 auto;width:80%;max-width:340px;background:var(--ink-2);
+    flex-direction:column;justify-content:center;gap:24px;transform:translateX(100%);transition:.4s;
     border-left:1px solid var(--line);z-index:1100;padding:40px}
   .menu.open{transform:none}
   .menu .btn{width:100%;justify-content:center}
@@ -356,11 +357,66 @@ a.info-row:hover .val{color:var(--amber)}
   .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .burger.open span:nth-child(2){opacity:0}
   .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .svc-grid{grid-template-columns:1fr}
-  .sec-grid,.proc-grid{grid-template-columns:1fr}
+
+  /* respiration générale */
+  .sec{padding:68px 0}
+  .sec-head{margin-bottom:36px}
+  .eyebrow{letter-spacing:.22em;font-size:.68rem}
+  .eyebrow::before{width:22px}
+
+  /* héros */
+  .hero{min-height:auto;padding:124px 0 56px}
+  .hero-grid{gap:34px}
+  .hero-side{order:0}
+  .hero h1{margin:18px 0 16px}
+  .hero p.lead{margin-bottom:26px}
+  .stat-card{padding:24px 24px}
+
+  /* bandeau défilant plus léger */
+  .marquee{padding:14px 0;margin-top:20px}
+  .marquee span{font-size:1.05rem;gap:30px}
+  .marquee-track{gap:30px}
+
+  /* services : cartes séparées et aérées */
+  .svc-grid{grid-template-columns:1fr;gap:14px;background:transparent;border:0;box-shadow:none;border-radius:0}
+  .svc{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow-sm);padding:30px 26px}
+  .svc:hover{background:#fff}
+
+  /* secteurs & process */
+  .sec-grid{grid-template-columns:1fr;gap:14px}
+  .proc-grid{grid-template-columns:1fr;gap:0}
+  .step{padding:26px 0}
+  .step.in::after{width:46%}
+
+  /* atouts */
+  .why{gap:30px}
+  .why-visual{min-height:200px;padding:36px}
+  .why-item{padding:20px 0}
+
+  /* prévente */
+  .po-grid{gap:34px}
+  .drop-card{max-width:320px}
+
+  /* contact */
+  .contact-grid{gap:36px}
+  form{padding:26px}
+  .field{margin-bottom:16px}
   .f-row{grid-template-columns:1fr}
-  .sec{padding:80px 0}
+  .info-row{padding:15px 0}
+  .assure{gap:8px;margin-bottom:26px}
+
+  /* cta & pied de page */
+  .cta-band{padding:62px 0}
+  .foot-top{gap:30px}
   .foot-bottom{flex-direction:column}
+}
+@media(max-width:430px){
+  .wrap{padding:0 18px}
+  .hero h1{font-size:clamp(2.5rem,11vw,3.3rem)}
+  .sec-head h2{font-size:2rem}
+  .svc{padding:26px 22px}
+  .stat-card{padding:22px 20px}
+  .cta-band h2{font-size:2.3rem}
 }
 </style>
 <script type="application/ld+json">
@@ -369,8 +425,8 @@ a.info-row:hover .val{color:var(--amber)}
   "@type": "ClothingStore",
   "name": "Empreinte GTEX",
   "description": "Atelier de personnalisation de vêtements à Tullins, près de Grenoble : broderie, impression DTF, prévente sur-mesure et textile personnalisé. Expédition dans toute la France.",
-  "url": "https://www.empreinte-gtex.fr/",
-  "image": "https://www.empreinte-gtex.fr/apercu.jpg",
+  "url": "https://empreintegtex.fr/",
+  "image": "https://empreintegtex.fr/apercu.jpg",
   "telephone": "+33698686100",
   "email": "empreintegtex@gmail.com",
   "priceRange": "€€",
@@ -435,7 +491,7 @@ a.info-row:hover .val{color:var(--amber)}
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-left">
-        <span class="eyebrow">Personnalisation de vêtements · Tullins & Grenoble</span>
+        <span class="eyebrow">Personnalisation de vêtements · Sur-mesure</span>
         <h1>
           <span class="l"><span>Votre marque,</span></span>
           <span class="l"><span class="grad">votre</span></span>
@@ -480,18 +536,21 @@ a.info-row:hover .val{color:var(--amber)}
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2v20M5 7l7 5 7-5M5 17l7-5 7 5"/></svg></div>
         <h3>Broderie</h3>
         <p>Finition haut de gamme et durable pour logos, polos et vêtements de travail. Rendu textile premium qui ne s'efface pas.</p>
+        <a class="svc-link" href="broderie-impression-dtf.html">En savoir plus →</a>
       </div>
       <div class="svc">
         <span class="num">02</span>
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg></div>
         <h3>Impression DTF</h3>
         <p>Visuels photo et dégradés sans limite de couleurs. Souplesse maximale, parfait pour les designs détaillés en petite quantité.</p>
+        <a class="svc-link" href="broderie-impression-dtf.html">En savoir plus →</a>
       </div>
       <div class="svc">
         <span class="num">03</span>
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.2 12h10l1.8-8H6"/><circle cx="9.5" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg></div>
         <h3>Prévente sur-mesure</h3>
         <p>On crée votre questionnaire de précommande : vos clients choisissent produit, coloris, marquage et taille. Vous vendez avant de produire — sans stock.</p>
+        <a class="svc-link" href="prevente-clubs-associations.html">En savoir plus →</a>
       </div>
       <div class="svc">
         <span class="num">04</span>
@@ -634,7 +693,7 @@ a.info-row:hover .val{color:var(--amber)}
       </a>
       <div class="info-row">
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
-        <div><div class="lab">Atelier</div><div class="val">Tullins (38) · près de Grenoble</div></div>
+        <div><div class="lab">Atelier</div><div class="val">Tullins (38), près de Grenoble — sans accueil du public</div></div>
       </div>
       <div class="info-row">
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7zM7 19a2 2 0 100-4 2 2 0 000 4zM18 19a2 2 0 100-4 2 2 0 000 4z"/></svg></div>
@@ -682,7 +741,7 @@ a.info-row:hover .val{color:var(--amber)}
       </div>
       <div class="foot-col">
         <h4>Prestations</h4>
-        <a href="#services">Broderie</a><a href="#services">Impression DTF</a><a href="#prevente">Prévente</a><a href="#services">Textile sur-mesure</a><a href="https://www.pvdtextile.com/web/content/2595405?unique=48ab603d68bda9db44da048664e8a4eeb1a4335e&amp;download=false" target="_blank" rel="noopener">Catalogue textile ↗</a>
+        <a href="broderie-impression-dtf.html">Broderie</a><a href="broderie-impression-dtf.html">Impression DTF</a><a href="prevente-clubs-associations.html">Prévente</a><a href="#services">Textile sur-mesure</a><a href="https://www.pvdtextile.com/web/content/2595405?unique=48ab603d68bda9db44da048664e8a4eeb1a4335e&amp;download=false" target="_blank" rel="noopener">Catalogue textile ↗</a>
       </div>
       <div class="foot-col">
         <h4>Navigation</h4>
